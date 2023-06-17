@@ -39,6 +39,9 @@ class ExternalWrapper:
                     "highlightedText": None,
                     "imageUrl": None,
                     "audioUrl": None
+                },
+                "question": {
+                    "text": None
                 }
             }
         }
@@ -50,7 +53,7 @@ class ExternalWrapper:
 
         return_dict["data"]["s1"]["highlightedText"] = re.findall("<b>(.*?)</b>", s1_raw_text)
 
-
+        return_dict["data"]["question"]["text"] = self.generate_question()
 
         return return_dict
 
@@ -70,7 +73,19 @@ class ExternalWrapper:
             max_tokens=350,
             temperature=0
             )
-
-        print(resp["choices"][0]["text"])
         
+        return resp["choices"][0]["text"]
+
+    def generate_question(self):
+        PROMPT = f"""
+        Write a yes or no question about {self.topic}, where the correct answer should be yes.
+        """
+
+        resp = self.openai_obj.Completion.create(
+            model="text-davinci-003",
+            prompt=PROMPT,
+            max_tokens=350,
+            temperature=0
+        )
+
         return resp["choices"][0]["text"]

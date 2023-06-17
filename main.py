@@ -29,4 +29,28 @@ def root():
 @app.post("/api/story")
 def post_api_story(user_resp: UserResp):
     print(user_resp)
-    return {"data": "sample response"}
+
+    return_dict = {
+        "data": {
+            "s1": {
+                "text": "string",
+                "highlightedText": "string",
+                "imageUrl": "string",
+                "audioUrl": "string"
+            },
+            "s2": {
+                "text": "string",
+                "highlightedText": "string",
+                "imageUrl": "string",
+                "audioUrl": "string"
+            },
+            "s3": {
+                "text": "string",
+                "highlightedText": "string",
+                "imageUrl": "string",
+                "audioUrl": "string"
+            }
+        }
+    }
+
+    return return_dict

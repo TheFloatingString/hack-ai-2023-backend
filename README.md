@@ -6,10 +6,15 @@ To install dependencies:
 pip install -r requirements.txt
 ```
 
+Environment variables:
+```
+set OPENAI_API_KEY='X'
+```
+
 To run:
 
 ```bash
-uvicorn main:app --reload
+python main.py
 ```
 
 Sample request:

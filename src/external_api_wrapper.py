@@ -61,7 +61,7 @@ class ExternalWrapper:
             The story is centered around a character with the following characteristics: {", ".join(self.character_descriptors)}. 
             The story is set in the universe of {self.character_environment}. 
             Write the story with the following style: {self.modifier}.
-            Enclose the best sentence or sentences that summarize the topic with <b> at the start, and </b> at the end.
+            Enclose the best sentence that summarizes the topic with <b> at the start, and </b> at the end.
             """
 
         resp = self.openai_obj.Completion.create(

@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import openai
 from dotenv import load_dotenv
+import uvicorn
 import os
 
 from models.models import UserResp
@@ -36,3 +37,6 @@ def post_api_story(user_resp: UserResp):
     return_dict = external_wrapper_obj.return_response()
 
     return return_dict
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -1,3 +1,7 @@
+from src.audio_functions import generate_audio
+
+import requests
+
 from dotenv import load_dotenv
 import os
 import re
@@ -55,8 +59,8 @@ class ExternalWrapper:
 
         return_dict["data"]["s1"]["highlightedText"] = re.findall("<b>(.*?)</b>", s1_raw_text)
 
-
         return_dict["data"]["question"]["text"] = self.generate_question()
+
 
         s2_raw_text = self.generate_text_s2(
             return_dict["data"]["question"]["text"],
@@ -69,6 +73,34 @@ class ExternalWrapper:
 
 
         return_dict["data"]["s3"]["text"] = self.generate_text_s3(return_dict["data"]["s1"]["text"])
+
+
+
+
+        generate_audio(
+            text_input=return_dict["data"]["s1"]["text"].replace("\n", ""),
+            filepath="static/api/audio/s1/output.mp3"
+        )
+        return_dict["data"]["s1"]["audioUrl"] = "/api/audio/s1"
+        return_dict["data"]["s2"]["audioUrl"] = "/api/audio/s2"
+        return_dict["data"]["s3"]["audioUrl"] = "/api/audio/s3"
+        return_dict["data"]["question"]["audioUrl"] = "/api/audio/question"
+
+        generate_audio(
+            text_input=return_dict["data"]["question"]["text"].replace("\n", ""),
+            filepath="static/api/audio/question/output.mp3"
+        )
+
+        generate_audio(
+            text_input=return_dict["data"]["s2"]["text"].replace("\n", ""),
+            filepath="static/api/audio/s2/output.mp3"
+        )
+
+        generate_audio(
+            text_input=return_dict["data"]["s3"]["text"].replace("\n", ""),
+            filepath="static/api/audio/s3/output.mp3"
+        )
+
         return return_dict
 
 

@@ -58,7 +58,7 @@ class ExternalWrapper:
     def generate_text_s1(self):
         S1_PROMPT = f"""
             Write a story that teaches a child about {self.topic}. 
-            The story is centered around a character with the following characteristics: {", ".join(self.character_descriptors)}. 
+            The story is centered around a character called {self.name} with the following characteristics: {", ".join(self.character_descriptors)}. 
             The story is set in the universe of {self.character_environment}. 
             Write the story with the following style: {self.modifier}.
             Enclose the best sentence that summarizes the topic with <b> at the start, and </b> at the end.

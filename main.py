@@ -3,6 +3,10 @@ import openai
 from dotenv import load_dotenv
 import os
 
+from models.models import UserResp
+
+
+
 load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -23,5 +27,6 @@ def root():
     return {"data": "Rest API"}
 
 @app.post("/api/story")
-def post_api_story():
+def post_api_story(user_resp: UserResp):
+    print(user_resp)
     return {"data": "sample response"}

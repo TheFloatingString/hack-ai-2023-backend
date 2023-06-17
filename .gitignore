@@ -3,3 +3,6 @@ venv
 
 # Ignore Python pycache folder
 __pycache__
+
+# Ignore .env file
+.env

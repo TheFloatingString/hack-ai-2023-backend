@@ -11,14 +11,6 @@ load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-resp = openai.Completion.create(
-        model="text-davinci-003",
-        prompt="What is the largest city in the United States?",
-        max_tokens=200,
-        temperature=0
-        )
-
-print(resp)
 
 app = FastAPI()
 
@@ -41,29 +33,6 @@ def post_api_story(user_resp: UserResp):
         openai_obj=openai
     )
 
-    external_wrapper_obj.generate_text()
-
-    return_dict = {
-        "data": {
-            "s1": {
-                "text": "string",
-                "highlightedText": "string",
-                "imageUrl": "string",
-                "audioUrl": "string"
-            },
-            "s2": {
-                "text": "string",
-                "highlightedText": "string",
-                "imageUrl": "string",
-                "audioUrl": "string"
-            },
-            "s3": {
-                "text": "string",
-                "highlightedText": "string",
-                "imageUrl": "string",
-                "audioUrl": "string"
-            }
-        }
-    }
+    return_dict = external_wrapper_obj.return_response()
 
     return return_dict

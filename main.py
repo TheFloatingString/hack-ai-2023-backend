@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import openai
 from dotenv import load_dotenv
 import uvicorn
+import json
 import os
 
 from models.models import UserResp
@@ -18,6 +19,14 @@ app = FastAPI()
 @app.get("/")
 def root():
     return {"data": "Rest API"}
+
+@app.post("/dev/story")
+def post_dev_story(user_resp: UserResp):
+
+    with open("static/sample_output.json") as json_file:
+        json_data = json.load(json_file)
+
+    return json_data
 
 @app.post("/api/story")
 def post_api_story(user_resp: UserResp):

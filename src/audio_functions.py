@@ -12,7 +12,7 @@ def generate_audio(text_input, filepath):
     }
 
     data = {
-        "text": "Hello",
+        "text": text_input,
         "model_id": "eleven_monolingual_v1",
         "voice_settings": {
             "stability": 0.5,

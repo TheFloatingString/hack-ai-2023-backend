@@ -35,18 +35,21 @@ class ExternalWrapper:
         return_dict = {
             "data": {
                 "s1": {
+                    "title": None,
                     "text": None,
                     "highlightedText": None,
                     "imageUrl": None,
                     "audioUrl": None
                 },
                 "s2": {
+                    "title": None,
                     "text": None,
                     "highlightedText": None,
                     "imageUrl": None,
                     "audioUrl": None
                 },
                 "s3": {
+                    "title": None,
                     "text": None,
                     "highlightedText": None,
                     "imageUrl": None,
@@ -167,7 +170,30 @@ class ExternalWrapper:
 
         print(">> Generated audio")
 
+        ### TITLE GENERATION ###
+
+        return_dict["data"]["s1"]["title"] = self.generate_title(return_dict["data"]["s1"]["text"].replace("\n", ""))
+        return_dict["data"]["s2"]["title"] = self.generate_title(return_dict["data"]["s2"]["text"].replace("\n", ""))
+        return_dict["data"]["s3"]["title"] = self.generate_title(return_dict["data"]["s3"]["text"].replace("\n", ""))
+
+
+        print(">> Generated titles")
+
+
         return return_dict
+
+
+
+    def generate_title(self, text):
+
+        completion = self.openai_obj.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "user", "content": f"Generate a title for the following text: \"{text}\""},
+            ]
+        )
+
+        return completion["choices"][0]["message"]["content"]
 
 
     def generate_text_s1(self):

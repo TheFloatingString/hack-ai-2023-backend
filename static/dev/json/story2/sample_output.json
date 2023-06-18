@@ -1,0 +1,57 @@
+{
+  "data": {
+    "s1": {
+      "title": "\"Riley's Outer Space Dream: Learning About Light Years\"",
+      "text": "\nRiley was a tall, smiling girl with long hair. She was a big fan of the Star Wars universe and dreamed of one day travelling through space. One day, she decided to ask her dad about the distances between planets. \n\n\"Dad, how far away is the planet Tatooine?\" she asked. \n\n\"Well, Riley,\" her dad said, \"it's about 4.2 light years away.\" \n\nRiley was confused. \"What's a light year?\" \n\nHer dad smiled. \"A light year is the distance light travels in one year. It's a really long way - about 6 trillion miles!\" \n\nRiley was amazed. \"Wow, that's really far!\" \n\n\"Yes,\" her dad said, \"but it's nothing compared to the distances between galaxies. That's measured in light years, too!\"",
+      "highlightedText": [
+        "light years"
+      ],
+      "imageUrl": "https://i.pinimg.com/736x/9d/df/32/9ddf3244484799311e53f9378520fab1.jpg",
+      "audioUrl": "/api/audio/s1"
+    },
+    "s2": {
+      "title": "\"The Measure of Space: Exploring Light Years\"",
+      "text": "A light year is a unit that shows how far light can travel in a year. It's a really long way, about 6 trillion miles! So, when we say that a star or planet is a certain number of light years away, we're talking about that distance. It's a way to measure distances in space because everything is so far apart.",
+      "highlightedText": [],
+      "imageUrl": "https://i.pinimg.com/736x/9d/df/32/9ddf3244484799311e53f9378520fab1.jpg",
+      "audioUrl": "/api/audio/s2"
+    },
+    "s3": {
+      "title": "\"Dreaming Among the Stars: One Girl's Journey to Explore the Universe\"",
+      "text": "Riley smiled and thought about all the amazing things she could discover out in space. She thanked her dad for teaching her about light years and she promised to keep learning more about the universe. Later that night, as she lay in bed, she looked up at the stars and wondered what kind of adventures awaited her. With a smile on her face and a sense of wonder in her heart, she drifted off to sleep, excited for what the future held.",
+      "highlightedText": null,
+      "imageUrl": "https://i.pinimg.com/736x/9d/df/32/9ddf3244484799311e53f9378520fab1.jpg",
+      "audioUrl": "/api/audio/s3"
+    },
+    "question": {
+      "text": "Is a light year a measure of distance?",
+      "audioUrl": "/api/audio/question"
+    },
+    "s4": {
+      "images": [
+        "https://i.pinimg.com/originals/f7/9a/fc/f79afc0306f1254467b1485fd3630e0a.png",
+        "https://i.pinimg.com/originals/ad/10/18/ad10188d07cb8d31b35e3abb24d2e4c3.jpg",
+        "https://i.pinimg.com/736x/9d/df/32/9ddf3244484799311e53f9378520fab1.jpg",
+        "https://i.pinimg.com/originals/ad/10/18/ad10188d07cb8d31b35e3abb24d2e4c3.jpg",
+        "https://i.pinimg.com/564x/e7/de/b8/e7deb8c15748bea60cac84c4e0ae496b.jpg",
+        "https://i.pinimg.com/564x/ed/a2/e2/eda2e21a09cb6c0ff5bccd5a4f6d61b7.jpg",
+        "https://i.pinimg.com/564x/e7/de/b8/e7deb8c15748bea60cac84c4e0ae496b.jpg",
+        "https://i.pinimg.com/736x/9d/df/32/9ddf3244484799311e53f9378520fab1.jpg",
+        "https://i.pinimg.com/736x/9d/df/32/9ddf3244484799311e53f9378520fab1.jpg",
+        "https://i.pinimg.com/736x/9d/df/32/9ddf3244484799311e53f9378520fab1.jpg"
+      ],
+      "text": [
+        "\nRiley was a tall, smiling girl with long hair",
+        "She was a big fan of the Star Wars universe and dreamed of one day travelling through space",
+        "One day, she decided to ask her dad about the distances between planets",
+        "\n\n\"Dad, how far away is the planet Tatooine?\" she asked",
+        "\n\n\"Well, Riley,\" her dad said, \"it's about 4.2 light years away.\" \n\nRiley was confused",
+        "\"What's a light year?\" \n\nHer dad smiled",
+        "\"A light year is the distance light travels in one year",
+        "It's a really long way - about 6 trillion miles!\" \n\nRiley was amazed",
+        "\"Wow, that's really far!\" \n\n\"Yes,\" her dad said, \"but it's nothing compared to the distances between galaxies",
+        "That's measured in <b>light years</b>, too!\""
+      ]
+    }
+  }
+}

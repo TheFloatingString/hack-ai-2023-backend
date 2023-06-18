@@ -25,16 +25,16 @@
             "audioUrl": "/dev/audio/story1/question"
         },
         "s4": {
-            "images": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9
+            "imageUrl": [
+                "/dev/image/story1/0",
+                "/dev/image/story1/1",
+                "/dev/image/story1/2",
+                "/dev/image/story1/3",
+                "/dev/image/story1/4",
+                "/dev/image/story1/5",
+                "/dev/image/story1/6",
+                "/dev/image/story1/7",
+                "/dev/image/story1/8"
             ],
             "text": [
                 "Sam was a young wizard with freckles, glasses, and a knack for being fast.",

@@ -5,10 +5,16 @@ import requests
 from dotenv import load_dotenv
 import os
 import re
-
+import json
+from src.embeddings import generate_embeddings
+import openai
 
 load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
+# Load URLs from json
+with open('static/urls.json') as f:
+    urls = json.load(f)
 
 class ExternalWrapper:
 
@@ -29,18 +35,21 @@ class ExternalWrapper:
         return_dict = {
             "data": {
                 "s1": {
+                    "title": None,
                     "text": None,
                     "highlightedText": None,
                     "imageUrl": None,
                     "audioUrl": None
                 },
                 "s2": {
+                    "title": None,
                     "text": None,
                     "highlightedText": None,
                     "imageUrl": None,
                     "audioUrl": None
                 },
                 "s3": {
+                    "title": None,
                     "text": None,
                     "highlightedText": None,
                     "imageUrl": None,
@@ -49,22 +58,50 @@ class ExternalWrapper:
                 "question": {
                     "text": None
                 },
-                "s4": {
+                "s4": { 
                     "images": [],
                     "text": []
                 }
             }
         }
 
+
+        ### S1 GENERATION ###
+
         s1_raw_text = self.generate_text_s1()
 
-        return_dict["data"]["s1"]["text"] = s1_raw_text.replace("<b>", "").replace("</b>", "")
+        print(">> Generated s1_raw_text")
 
+
+        return_dict["data"]["s1"]["text"] = s1_raw_text.replace("<b>", "").replace("</b>", "")
+        # Split the paragraph into sentences
+        sentences = s1_raw_text.split(". ")
+
+
+
+        ### S4 TEXT AND IMAGE GENERATION ###
+
+        # Store each sentence in a dictionary with keys being the sentence number
+        script = {str(i+1): sentence for i, sentence in enumerate(sentences)}
+        s4_generated_images = generate_embeddings(script, urls)
+
+        return_dict["data"]["s4"]["text"] = s4_generated_images[0]
+        return_dict["data"]["s4"]["images"] = s4_generated_images[1]
+
+        print(">> Generated s4 text and images")
+
+
+
+        ### QUESTION GENERATION ###
 
         return_dict["data"]["s1"]["highlightedText"] = re.findall("<b>(.*?)</b>", s1_raw_text)
 
         return_dict["data"]["question"]["text"] = self.generate_question()
 
+        print(">> Generated question")
+
+
+        ### S2 TEXT GENERATION ###
 
         s2_raw_text = self.generate_text_s2(
             return_dict["data"]["question"]["text"],
@@ -75,11 +112,37 @@ class ExternalWrapper:
 
         return_dict["data"]["s2"]["highlightedText"] = re.findall("<b>(.*?)</b>", s2_raw_text)
 
+        print(">> Generated s2 text")
+
+
+        ### S3 TEXT GENERATION ###
 
         return_dict["data"]["s3"]["text"] = self.generate_text_s3(return_dict["data"]["s1"]["text"])
 
+        print(">> Generated s3 text")
 
 
+
+        ### IMAGE GENERATION FOR S1, S2 AND S3 ###
+
+        s1_s2_s3_script = {
+            0: return_dict["data"]["s1"]["text"].replace("\n", ""),
+            1: return_dict["data"]["s2"]["text"].replace("\n", ""),
+            2: return_dict["data"]["s3"]["text"].replace("\n", "")
+        }
+
+
+        s1_s2_s3_generation = generate_embeddings(s1_s2_s3_script, urls)
+
+
+        return_dict["data"]["s1"]["imageUrl"] = s1_s2_s3_generation[1][0]
+        return_dict["data"]["s2"]["imageUrl"] = s1_s2_s3_generation[1][1]
+        return_dict["data"]["s3"]["imageUrl"] = s1_s2_s3_generation[1][2]
+
+
+        print(">> Generated images for s1, s2 and s3")
+
+        ### AUDIO GENERATION ###
 
         generate_audio(
             text_input=return_dict["data"]["s1"]["text"].replace("\n", ""),
@@ -105,9 +168,32 @@ class ExternalWrapper:
             filepath="static/api/audio/s3/output.mp3"
         )
 
-        return_dict["data"]["s4"]["text"] = return_dict["data"]["s1"]["text"].replace("\n", "").split()
+        print(">> Generated audio")
+
+        ### TITLE GENERATION ###
+
+        return_dict["data"]["s1"]["title"] = self.generate_title(return_dict["data"]["s1"]["text"].replace("\n", ""))
+        return_dict["data"]["s2"]["title"] = self.generate_title(return_dict["data"]["s2"]["text"].replace("\n", ""))
+        return_dict["data"]["s3"]["title"] = self.generate_title(return_dict["data"]["s3"]["text"].replace("\n", ""))
+
+
+        print(">> Generated titles")
+
 
         return return_dict
+
+
+
+    def generate_title(self, text):
+
+        completion = self.openai_obj.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "user", "content": f"Generate a title for the following text: \"{text}\""},
+            ]
+        )
+
+        return completion["choices"][0]["message"]["content"]
 
 
     def generate_text_s1(self):

@@ -29,9 +29,9 @@ def post_dev_story(user_resp: UserResp):
 
     return json_data
 
-# @app.get("/api/audio/{audio_identifier}")
-# def get_dev_audio_s1(audio_identifier):
-#     return FileResponse(path=f"static/api/audio/{audio_identifier}/output.mp3", media_type="text/mp3", filename="output.mp3")
+@app.get("/api/audio/{audio_identifier}")
+def get_dev_audio_s1(audio_identifier):
+    return FileResponse(path=f"static/api/audio/{audio_identifier}/output.mp3", media_type="text/mp3", filename="output.mp3")
 
 @app.get("/dev/audio/{folder_identifier}/{audio_identifier}")
 def get_dev_audio(folder_identifier, audio_identifier):

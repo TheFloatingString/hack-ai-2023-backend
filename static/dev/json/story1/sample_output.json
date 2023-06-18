@@ -1,6 +1,7 @@
 {
     "data": {
         "s1": {
+            "title": "The Energetic Adventures of Sam the Wizard",
             "text": "\nSam was a young wizard with freckles, glasses, and a knack for being fast. He was always curious about the world around him, and one day he decided to find out what energy was. He asked his teacher, Professor Dumbledore, who told him energy is the ability to do work. Sam was so excited to learn about energy that he decided to try it out for himself. He ran around the castle, zapping objects with his wand and making them move. He even managed to make a broomstick fly! Sam was amazed at how much energy he had and how it could be used to do work. He was so excited that he decided to share his newfound knowledge with his friends. From then on, Sam was known as the wizard with the most energy!",
             "highlightedText": [
                 "energy is the ability to do work"
@@ -9,12 +10,14 @@
             "audioUrl": "/dev/audio/story/s1"
         },
         "s2": {
+            "title": "The Marvels of Energy: Unleashing the Power of Work and Motion",
             "text": "Energy is the ability to do work, which enables us to make things move and do all sorts of fun stuff. If you've got a lot of energy, you can run as fast as Sam, the wizard with freckles and glasses. He discovered the wonders of energy in the Harry Potter universe, by zapping objects with his wand and making them move. The more energy you've got, the more work you can do. This means that energy is like a superpower that makes everything around us move and happen!",
             "highlightedText": [],
             "imageUrl": "/dev/image/story1/s2",
             "audioUrl": "/dev/audio/story1/s2"
         },
         "s3": {
+            "title": "Sam's Empowered Journey: Harnessing Energy for Good",
             "text": "After sharing his new discovery with his friends, Sam helped them understand how energy worked. Together, they found more ways to use their energy for good; they helped clean the castle's dusty rooms and grow magical plants in the Hogwarts gardens. Sam learned that energy wasn't just about power, but it was about using his abilities to help others. From then on, Sam made it his mission to use his energy to make the world a better place. He thanked Professor Dumbledore for teaching him about energy and said he was grateful for his magical powers. Now, every time Sam used his energy, he felt a sense of joy and fulfillment knowing that he was making a difference.",
             "highlightedText": null,
             "imageUrl": "/dev/image/story1/s3",

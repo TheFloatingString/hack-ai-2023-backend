@@ -28,7 +28,7 @@
       "audioUrl": "/dev/audio/story1/question"
     },
     "s4": {
-      "images": [
+      "imageUrl": [
         "https://i.pinimg.com/originals/c4/b2/dc/c4b2dc4d1d2cd1e81a7ecfc72aeb57e1.png",
         "https://i.pinimg.com/originals/45/17/0a/45170a21491be0ee6ca0f9d1cc5e9a7b.png",
         "https://i.pinimg.com/originals/c4/b2/dc/c4b2dc4d1d2cd1e81a7ecfc72aeb57e1.png",

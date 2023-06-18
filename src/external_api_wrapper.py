@@ -1,10 +1,16 @@
 from dotenv import load_dotenv
 import os
 import re
-
+import json
+from src.embeddings import generate_embeddings
+import openai
 
 load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
+# Load URLs from json
+with open('static/urls.json') as f:
+    urls = json.load(f)
 
 class ExternalWrapper:
 
@@ -51,6 +57,12 @@ class ExternalWrapper:
         s1_raw_text = self.generate_text_s1()
 
         return_dict["data"]["s1"]["text"] = s1_raw_text.replace("<b>", "").replace("</b>", "")
+        # Split the paragraph into sentences
+        sentences = s1_raw_text.split(". ")
+
+        # Store each sentence in a dictionary with keys being the sentence number
+        script = {str(i+1): sentence for i, sentence in enumerate(sentences)}
+        return_dict["data"]["s1"]["imageUrl"]=generate_embeddings(script, urls)
 
 
         return_dict["data"]["s1"]["highlightedText"] = re.findall("<b>(.*?)</b>", s1_raw_text)

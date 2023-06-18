@@ -24,7 +24,7 @@ def root():
 @app.post("/dev/story")
 def post_dev_story(user_resp: UserResp):
 
-    with open("static/dev/json/sample_output.json") as json_file:
+    with open("static/dev/json/story1/sample_output.json") as json_file:
         json_data = json.load(json_file)
 
     return json_data

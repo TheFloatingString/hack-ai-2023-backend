@@ -5,19 +5,19 @@
             "highlightedText": [
                 "energy is the ability to do work"
             ],
-            "imageUrl": null,
+            "imageUrl": "/dev/image/story1/s1",
             "audioUrl": "/dev/audio/story/s1"
         },
         "s2": {
             "text": "Energy is the ability to do work, which enables us to make things move and do all sorts of fun stuff. If you've got a lot of energy, you can run as fast as Sam, the wizard with freckles and glasses. He discovered the wonders of energy in the Harry Potter universe, by zapping objects with his wand and making them move. The more energy you've got, the more work you can do. This means that energy is like a superpower that makes everything around us move and happen!",
             "highlightedText": [],
-            "imageUrl": null,
+            "imageUrl": "/dev/image/story1/s2",
             "audioUrl": "/dev/audio/story1/s2"
         },
         "s3": {
             "text": "After sharing his new discovery with his friends, Sam helped them understand how energy worked. Together, they found more ways to use their energy for good; they helped clean the castle's dusty rooms and grow magical plants in the Hogwarts gardens. Sam learned that energy wasn't just about power, but it was about using his abilities to help others. From then on, Sam made it his mission to use his energy to make the world a better place. He thanked Professor Dumbledore for teaching him about energy and said he was grateful for his magical powers. Now, every time Sam used his energy, he felt a sense of joy and fulfillment knowing that he was making a difference.",
             "highlightedText": null,
-            "imageUrl": null,
+            "imageUrl": "/dev/image/story1/s3",
             "audioUrl": "/dev/audio/story1/s3"
         },
         "question": {

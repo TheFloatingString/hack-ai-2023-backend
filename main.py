@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from starlette.responses import FileResponse
 import openai
 from dotenv import load_dotenv
 import uvicorn
@@ -23,10 +24,22 @@ def root():
 @app.post("/dev/story")
 def post_dev_story(user_resp: UserResp):
 
-    with open("static/sample_output.json") as json_file:
+    with open("static/dev/json/story1/sample_output.json") as json_file:
         json_data = json.load(json_file)
 
     return json_data
+
+@app.get("/api/audio/{audio_identifier}")
+def get_dev_audio_s1(audio_identifier):
+    return FileResponse(path=f"static/api/audio/{audio_identifier}/output.mp3", media_type="text/mp3", filename="output.mp3")
+
+@app.get("/dev/audio/{folder_identifier}/{audio_identifier}")
+def get_dev_audio(folder_identifier, audio_identifier):
+    return FileResponse(path=f"static/dev/audio/{folder_identifier}/{audio_identifier}/output.mp3", media_type="text/mp3", filename="output.mp3")
+
+@app.get("/dev/image/{folder_identifier}/{frame_identifier}")
+def get_dev_image(folder_identifier, frame_identifier):
+    return FileResponse(path=f"static/dev/image/{folder_identifier}/{frame_identifier}.png")
 
 @app.post("/api/story")
 def post_api_story(user_resp: UserResp):

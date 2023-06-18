@@ -1,0 +1,63 @@
+{
+  "data": {
+    "s1": {
+      "title": "\"The Energy Adventure of Young Wizard Sam\"",
+      "text": "\nSam was a young wizard with freckles, glasses, and a knack for being fast. He was always curious about the world around him, and one day he decided to find out what energy was. He asked his professor, Professor Dumbledore, who told him energy is the ability to do work. \n\nSam was so excited to learn about energy that he decided to go on an adventure to find out more. He flew on his broomstick to the Forbidden Forest and found a magical creature called a Niffler. The Niffler was using its energy to dig for treasure. Sam watched in amazement as the Niffler used its energy to move around and search for shiny objects. \n\nNext, Sam flew to the Quidditch pitch and watched a match. He saw how the players used their energy to fly around the pitch and catch the golden snitch. Sam was amazed at how the players used their energy to move so quickly and with such agility. \n\nFinally, Sam flew back to Hogwarts and realized that energy was everywhere. He understood that energy was the ability to do work and that it was all around him. He was so excited to learn about energy and he couldn't wait to tell his friends.",
+      "highlightedText": [
+        "energy is the ability to do work"
+      ],
+      "imageUrl": "https://i.pinimg.com/originals/c4/b2/dc/c4b2dc4d1d2cd1e81a7ecfc72aeb57e1.png",
+      "audioUrl": "/dev/audio/story1/s1"
+    },
+    "s2": {
+      "title": "\"The Magical Energy of Harry Potter: From Flying Broomsticks to Chasing the Golden Snitch\"",
+      "text": "Energy is the ability to do work. It helps us move, play, and get things done. In the magical world of Harry Potter, energy can be seen in flying broomsticks, working creatures like the Niffler and Quidditch players who use their energy to chase the golden snitch. Energy is all around us, helping us to do everything we need to do.",
+      "highlightedText": [],
+      "imageUrl": "https://i.pinimg.com/originals/ad/10/18/ad10188d07cb8d31b35e3abb24d2e4c3.jpg",
+      "audioUrl": "/dev/audio/story1/s2"
+    },
+    "s3": {
+      "title": "The Adventure of Learning: Sam's Quest for Knowledge and Friendship",
+      "text": "As Sam walked back to his dormitory, he smiled as he realized how much he had learned about energy. He couldn't wait to tell all his friends about his adventure and share his newfound knowledge with them. As he walked into his dorm room, he found a note left by his friend Ron, who congratulated him on his bravery and curiosity. Sam felt proud of himself for being so adventurous but also grateful to his friends for always supporting him. In the end, Sam knew that he had learned not just about energy but about the importance of friendship as well. With a smile on his face, Sam snuggled into bed, happy to have had such a fun and educational day.",
+      "highlightedText": null,
+      "imageUrl": "https://i.pinimg.com/originals/4a/e3/71/4ae37105e28ada7fed575dd8d382bf4d.jpg",
+      "audioUrl": "/dev/audio/story1/s3"
+    },
+    "question": {
+      "text": "Is energy what makes things move and work?",
+      "audioUrl": "/dev/audio/story1/question"
+    },
+    "s4": {
+       "imageUrl": [
+        "https://i.pinimg.com/originals/55/72/fd/5572fdeadf227d62d0c35715935b076f.jpg",
+        "https://scontent.cdninstagram.com/v/t51.2885-15/328950910_921617612182506_1787808040572533366_n.webp?stp=dst-jpg_e35&_nc_ht=scontent.cdninstagram.com&_nc_cat=106&_nc_ohc=6IKLM7D2XGIAX_olYUa&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzAzMTk2MzAwNDk1NzkxMDA4Nw%3D%3D.2-ccb7-5&oh=00_AfDOw1t0fbdhP9tnQXQQPOtUQpuCVeQU9UJKrzi6H54M_A&oe=6492CAA9&_nc_sid=df044f",
+        "https://i.pinimg.com/originals/ad/10/18/ad10188d07cb8d31b35e3abb24d2e4c3.jpg",
+        "https://i.pinimg.com/564x/ed/a2/e2/eda2e21a09cb6c0ff5bccd5a4f6d61b7.jpg",
+        "https://i.pinimg.com/originals/c4/b2/dc/c4b2dc4d1d2cd1e81a7ecfc72aeb57e1.png",
+        "https://i.pinimg.com/564x/55/92/ff/5592ff209061ecb81d74e17fe074e0ae.jpg",
+        "https://i.pinimg.com/originals/5a/17/7a/5a177aaeb25b618fdeff8603824e11b4.jpg",
+        "https://i.pinimg.com/564x/59/2f/5d/592f5dc3e6a66bfb4e24f27a6cf6ba4d.jpg",
+        "https://i.pinimg.com/originals/86/88/36/868836b9cfdff789d2fad5a1d7ffcbad.jpg",
+        "https://i.pinimg.com/564x/b0/71/a3/b071a366fa18f5d6e638b48295c579b5.jpg",
+        "https://i.pinimg.com/564x/d7/60/e0/d760e01db32ca52e39619f059babb5f0.jpg",
+        "https://i.pinimg.com/originals/55/7a/3b/557a3b3e45685f6fe1c321f89c6e3692.jpg",
+        "https://i.pinimg.com/564x/59/2f/5d/592f5dc3e6a66bfb4e24f27a6cf6ba4d.jpg"
+      ],
+      "text": [
+        "\nSam was a young wizard with freckles, glasses, and a knack for being fast",
+        "He was always curious about the world around him, and one day he decided to find out what energy was",
+        "He asked his professor, Professor Dumbledore, who told him energy is the ability to do work",
+        "\n\nSam was so excited to learn about energy that he decided to go on an adventure to find out more",
+        "He flew on his broomstick to the Forbidden Forest and found a magical creature called a Niffler",
+        "The Niffler was using its energy to dig for treasure",
+        "Sam watched in amazement as the Niffler used its energy to move around and search for shiny objects",
+        "\n\nNext, Sam flew to the Quidditch pitch and watched a match",
+        "He saw how the players used their energy to fly around the pitch and catch the golden snitch",
+        "Sam was amazed at how the players used their energy to move so quickly and with such agility",
+        "\n\nFinally, Sam flew back to Hogwarts and realized that energy was everywhere",
+        "He understood that energy was the ability to do work and that it was all around him",
+        "He was so excited to learn about energy and he couldn't wait to tell his friends."
+      ]
+    }
+  }
+}

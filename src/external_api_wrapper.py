@@ -48,6 +48,10 @@ class ExternalWrapper:
                 },
                 "question": {
                     "text": None
+                },
+                "s4": {
+                    "images": [],
+                    "text": []
                 }
             }
         }
@@ -101,12 +105,17 @@ class ExternalWrapper:
             filepath="static/api/audio/s3/output.mp3"
         )
 
+        return_dict["data"]["s4"]["text"] = return_dict["data"]["s1"]["text"].replace("\n", "").split()
+
         return return_dict
 
 
     def generate_text_s1(self):
+
+        # TODO 150 words?
+
         self.S1_PROMPT = f"""
-            Write a 90-word story story that teaches a child about the following topic:    {self.topic}. 
+            Write a 150-word story story that teaches a child about the following topic: {self.topic}. 
             The story is centered around a character called {self.name} with the following characteristics: {", ".join(self.character_descriptors)}. 
             The story is set in the universe of {self.character_environment}. 
             Write the story with the following style: {self.modifier}.
